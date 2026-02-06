@@ -1,0 +1,164 @@
+:root {
+  --bg: #f7f7f7;
+  --surface: #ffffff;
+
+  --text: #111111;
+  --muted: #5d5d5d;
+
+  --border: #e5e5e5;
+  --shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+
+  --radius: 14px;
+
+  --container: 1000px;
+  --pad: 16px;
+  --gap: 12px;
+
+  --link: #111111;
+  --linkHover: #000000;
+
+  --btn: #111111;
+  --btnHover: #2b2b2b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header,
+main,
+footer {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: var(--pad);
+}
+
+header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+header p {
+  margin: 4px 0 0;
+  color: var(--muted);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+section {
+  margin-top: 20px;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--linkHover);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+nav a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #f1f1f1;
+  color: var(--text);
+}
+
+nav a:hover {
+  background: #e8e8e8;
+}
+
+nav a.is-active {
+  background: var(--btn);
+  border-color: var(--btn);
+  color: #ffffff;
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+
+#assignments-container {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--gap);
+}
+
+section[aria-labelledby="about-title"] {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px;
+}
+
+section[aria-labelledby="about-title"] h2 {
+  margin-top: 0;
+}
+
+section[aria-labelledby="about-title"] p {
+  margin: 6px 0;
+  color: var(--muted);
+}
+
+footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  margin-top: 24px;
+}
+
+footer p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@media (max-width: 560px) {
+  header h1 {
+    font-size: 20px;
+  }
+
+  nav a {
+    padding: 7px 10px;
+  }
+}
